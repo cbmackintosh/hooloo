@@ -15,3 +15,8 @@ export const getAllMovies = () => {
   return fetch(`${baseURL}/movies`)
   .then(response => response.json())
 }
+
+export const getAllUserRatings = (id) => {
+  return fetch(`${baseURL}/users/${id}/ratings`)
+  .then(response => response.json())
+}

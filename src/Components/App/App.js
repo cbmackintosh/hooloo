@@ -22,7 +22,7 @@ export default class App extends Component {
       )
     } else {
       return (
-        <Main />
+        <Main user={this.state.user} setUser={this.setUser} />
       )
     }
   }
