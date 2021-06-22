@@ -1,6 +1,7 @@
 import './App.css';
 import { Component } from 'react'
 import Login from '../Login/Login'
+import Main from '../Main/Main'
 
 export default class App extends Component {
   constructor() {
@@ -21,7 +22,7 @@ export default class App extends Component {
       )
     } else {
       return (
-        <h1>Home</h1>
+        <Main />
       )
     }
   }

@@ -16,8 +16,8 @@ const Login = ({ setUser }) => {
     loginUser(loginAttempt)
     .then(data => {
       if (!data.error) {
-        setUser(data)
-        localStorage.setItem('hooloo-login', JSON.stringify(data))
+        setUser(data.user)
+        localStorage.setItem('hooloo-login', JSON.stringify(data.user))
       } else {
         setError(data.error)
       }
@@ -27,7 +27,7 @@ const Login = ({ setUser }) => {
   return (
     <form onSubmit={handleSubmit}>
 
-      <label for="email">Email:</label>
+      <label htmlFor="email">Email:</label>
       <input 
         type="text" 
         id="email" 
@@ -35,7 +35,7 @@ const Login = ({ setUser }) => {
         onChange={e => setEmail(e.target.value)}
       />
 
-      <label for="password">Password:</label>
+      <label htmlFor="password">Password:</label>
       <input 
         type="password" 
         id="password" 

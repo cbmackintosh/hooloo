@@ -1,7 +1,6 @@
 const baseURL = `https://rancid-tomatillos.herokuapp.com/api/v2`
 
 export const loginUser = (loginAttempt) => {
-  console.log(typeof email)
   return fetch(`${baseURL}/login`, {
     method: 'POST',
     headers: {
@@ -10,4 +9,9 @@ export const loginUser = (loginAttempt) => {
     body: JSON.stringify(loginAttempt)
   })
     .then(response => response.json())
+}
+
+export const getAllMovies = () => {
+  return fetch(`${baseURL}/movies`)
+  .then(response => response.json())
 }
