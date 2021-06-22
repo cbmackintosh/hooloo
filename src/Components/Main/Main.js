@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'  
 import { getAllMovies } from '../../API-Calls'
 import Account from '../Account/Account'
+import Home from '../Home/Home'
 
 export default class Main extends Component {
   constructor({ user, setUser }) {
@@ -26,7 +27,9 @@ export default class Main extends Component {
         </Route>
   
         <Route path='/home'>
-          <h1>Render Home component with carousels organized by genre</h1>
+          <Home
+            movies={this.state.movies}
+          />
         </Route>
   
         <Route path='/search'>
