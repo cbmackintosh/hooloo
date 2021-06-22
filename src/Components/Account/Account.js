@@ -3,6 +3,8 @@ import { getAllUserRatings } from '../../API-Calls'
 
 const Account = ({ user, setUser, movies }) => {
 
+  console.log('test')
+
   const [ratings, setRatings] = useState([])
 
   useEffect(() => {

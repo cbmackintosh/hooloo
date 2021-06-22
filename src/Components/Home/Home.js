@@ -1,18 +1,15 @@
 import React from 'react'
-import NavBar from '../NavBar/NavBar'
+import FeaturedTile from '../FeaturedTile/FeaturedTile'
 
 const Home = ({ movies }) => {
-
+  console.log(movies)
   return (
-    <main>
-      <NavBar className="nav" />
-      <div className="home">
-        {/* <FeaturedTile 
-          className="featured-container" 
-          movie={movies[Math.floor(Math.random() * movies.length)]} 
-        /> */}
-      </div>
-    </main>
+    <div className="home">
+      <FeaturedTile 
+        className="featured-container" 
+        movie={movies[Math.floor(Math.random() * movies.length)]} 
+      />
+    </div>
   )
 
 }

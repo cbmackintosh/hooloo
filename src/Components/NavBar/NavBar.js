@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './NavBar.css'
 
 export default class NavBar extends Component {
@@ -13,9 +14,9 @@ export default class NavBar extends Component {
   render() {
     return(
       <nav className={"visible-" + this.state.visible}>
-        <button>Account</button>
-        <h1>Hooloo</h1>
-        <button>Search</button>
+        <Link to='/account'><button>Account</button></Link>
+        <Link to='/'><h1>Hooloo</h1></Link>
+        <Link to='/search'><button>Search</button></Link>
       </nav>
     )
   }
