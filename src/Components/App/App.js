@@ -1,11 +1,28 @@
 import './App.css';
+import { Component } from 'react'
+import Login from '../Login/Login'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Welcome to Hooloo</h1>
-    </div>
-  );
+export default class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      user: JSON.parse(localStorage.getItem('hooloo-login'))
+    }
+  }
+
+  setUser = (user) => {
+    this.setState({ user: user })
+  }
+
+  render() {
+    if (!this.state.user) {
+      return (
+        <Login setUser={this.setUser} />
+      )
+    } else {
+      return (
+        <h1>Home</h1>
+      )
+    }
+  }
 }
-
-export default App;
