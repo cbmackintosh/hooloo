@@ -1,0 +1,14 @@
+
+.featured-tile-container {
+  background-size: cover;
+  height: 88vh;
+  width: 100%;
+}
+
+.text {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(117, 19, 93, 1));
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
